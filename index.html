@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dalvie College Admissions</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f6f8fb;
+    color: #1f2937;
+}
+
+/* ⭐ ATTRACTIVE TOP HEADER WITH LOGO */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(90deg, #1e3a8a, #f97316);
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+.top-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: white;
+    padding: 3px;
+}
+
+.top-header h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* HEADER (UNCHANGED) */
+header {
+    background: linear-gradient(90deg, #1e3a8a, #f97316);
+    color: white;
+    padding: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ⭐ HERO IMAGE HEIGHT REDUCED (SHORT BACKGROUND) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('college.jpg') no-repeat center;
+    background-size: cover;
+    height: 60vh;   /* 🔥 shorter as requested */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 { font-size: 42px; }
+.hero p { font-size: 18px; margin-top: 10px; }
+
+.btn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #f97316;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #1e3a8a;
+}
+
+.sub {
+    text-align: center;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #fff7ed;
+}
+
+.info-box {
+    display: none;
+    background: white;
+    padding: 22px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #f97316;
+}
+
+.form-box {
+    background: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.location-box {
+    text-align: center;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.map-box {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ⭐ NEW ATTRACTIVE HEADER -->
+<div class="top-header">
+ <img src="images.jpg" alt="College Logo">
+
+    <div class="title-box">
+        <h1>Vijayalakshmi Vishwanath Dalvie Model College</h1>
+        <p>College in Talere, Maharashtra 416801</p>
+    </div>
+</div>
+<div class="hero">
+    <h1>Admissions Open 2026</h1>
+    <p>Build your future with quality education & career opportunities</p>
+    <button class="btn" onclick="document.getElementById('apply').scrollIntoView()">
+        Apply Now
+    </button>
+</div>
+
+<!-- MAP -->
+<section>
+    <h2>College Location</h2>
+
+    <div class="location-box">
+        📍 Dalvie College, Talera, Maharashtra
+    </div>
+
+    <div class="map-box">
+        <iframe src="https://www.google.com/maps?q=Dalvie%20College%20Talera%20Maharashtra&output=embed"></iframe>
+    </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section>
+    <h2>Why Choose This College</h2>
+    <div class="sub">महाविद्यालय का निवडावे?</div>
+
+    <div class="grid">
+        <div class="card">Experienced Faculty</div>
+        <div class="card">Modern Infrastructure</div>
+        <div class="card">Digital Library</div>
+        <div class="card">WiFi Campus</div>
+        <div class="card">Affordable Fees</div>
+        <div class="card">Scholarship Support</div>
+        <div class="card">Career Guidance</div>
+        <div class="card">Placement Assistance</div>
+        <div class="card">Internship Programs</div>
+        <div class="card">Sports Facilities</div>
+        <div class="card">Cultural Activities</div>
+        <div class="card">Safe & Secure Campus</div>
+    </div>
+</section>
+
+<!-- COURSES -->
+<section>
+    <h2>Courses Offered</h2>
+
+    <div class="grid">
+        <div class="card" onclick="showCourse('bscit')">B.Sc IT</div>
+        <div class="card" onclick="showCourse('bcom')">B.Com</div>
+        <div class="card" onclick="showCourse('ba')">BA</div>
+        <div class="card" onclick="showCourse('baf')">BAF</div>
+        <div class="card" onclick="showCourse('bms')">BMS</div>
+        <div class="card" onclick="showCourse('bbi')">BBI</div>
+        <div class="card" onclick="showCourse('bammc')">BAMMC</div>
+    </div>
+
+    <div id="info" class="info-box"></div>
+</section>
+
+<!-- FORM -->
+<section id="apply">
+    <h2>Admission Form</h2>
+
+    <div class="form-box">
+
+        <form action="https://formsubmit.co/poojabhagwat602@gmail.com" method="POST">
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email ID" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+
+            <input type="tel" name="alternate_phone" placeholder="Alternate Phone Number">
+
+            <textarea name="address" placeholder="Full Address" required></textarea>
+
+            <select name="category" required>
+                <option value="">Select Category</option>
+                <option>General</option>
+                <option>Reserved</option>
+            </select>
+
+           <select name="course" required>
+                <option value="">Select Course</option>
+                <option>B.Sc IT</option>
+                <option>B.Com</option>
+                <option>BA</option>
+                <option>BAF</option>
+                <option>BMS</option>
+                <option>BBI</option>
+                <option>BAMMC</option>
+            </select>
+
+            <button type="submit">Submit Application</button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+    <h2>Contact Us</h2>
+    <div class="sub">Get in touch with college office</div>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>📞 Phone</h3>
+            <p><a href="tel:+919421235570">+91 9421235570</a></p>
+        </div>
+
+        <div class="card">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:dalviecollege@mu.ac.in">dalviecollege@mu.ac.in</a></p>
+        </div>
+
+        <div class="card">
+            <h3>📍 Address</h3>
+            <p>Dalvie College, Talera, Maharashtra, India</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+© 2026 Dalvie College | Talera, Maharashtra
+</footer>
+
+<script>
+function showCourse(c) {
+    document.getElementById("info").style.display = "block";
+
+    const data = {
+        bscit: `
+        <h3>B.Sc IT</h3>
+        Eligibility: 45% Open | 40% Reserved + Maths compulsory<br>
+        Stream: Science / Commerce<br>
+        Jobs: Software Developer, Cyber Security, Data Analyst
+        `,
+        bcom: `
+        <h3>B.Com</h3>
+        Eligibility: 35% All Categories<br>
+        Stream: Commerce<br>
+        Jobs: Accountant, Banking, Finance Executive
+        `,
+        ba: `
+        <h3>BA</h3>
+        Eligibility: 35% All Categories<br>
+        Stream: Arts<br>
+        Jobs: Teacher, Govt Jobs
+        `,
+        baf: `
+        <h3>BAF</h3>
+        Eligibility: 45% Open | 40% Reserved<br>
+        Stream: Commerce<br>
+        Jobs: CA, Auditor
+        `,
+        bms: `
+        <h3>BMS</h3>
+        Eligibility: 45% Open | 40% Reserved<br>
+        Stream: Commerce<br>
+        Jobs: Manager, HR
+        `,
+        bbi: `
+        <h3>BBI</h3>
+        Eligibility: 45% Open | 40% Reserved<br>
+        Stream: Commerce<br>
+        Jobs: Bank Officer
+        `,
+        bammc: `
+        <h3>BAMMC</h3>
+        Eligibility: 45% Open | 40% Reserved<br>
+        Stream: Arts<br>
+        Jobs: Media Industry
+        `
+    };
+
+    document.getElementById("info").innerHTML = data[c];
+}
+</script>
+
+</body>
+</html>
